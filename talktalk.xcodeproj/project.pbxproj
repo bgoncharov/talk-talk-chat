@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		A10FEE47247365E9000835C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE46247365E9000835C8 /* AppDelegate.swift */; };
 		A10FEE49247365E9000835C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE48247365E9000835C8 /* SceneDelegate.swift */; };
-		A10FEE4B247365E9000835C8 /* UIViewControllerRepresentableContext<Self>.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE4A247365E9000835C8 /* UIViewControllerRepresentableContext<Self>.swift */; };
+		A10FEE4B247365E9000835C8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE4A247365E9000835C8 /* AuthViewController.swift */; };
 		A10FEE50247365EC000835C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10FEE4F247365EC000835C8 /* Assets.xcassets */; };
 		A10FEE53247365EC000835C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10FEE51247365EC000835C8 /* LaunchScreen.storyboard */; };
+		A10FEE5B2473798A000835C8 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE5A24737989000835C8 /* UIButton + Extension.swift */; };
+		A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC4B2473A10F00A3BDBA /* UIFont + Extension.swift */; };
+		A127DC4E2473A26E00A3BDBA /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC4D2473A26E00A3BDBA /* UIColor + Extension.swift */; };
+		A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC4F2473A50D00A3BDBA /* Label + Extension.swift */; };
+		A127DC522473A61300A3BDBA /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC512473A61300A3BDBA /* UIImageView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A10FEE43247365E9000835C8 /* talktalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talktalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10FEE46247365E9000835C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A10FEE48247365E9000835C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A10FEE4A247365E9000835C8 /* UIViewControllerRepresentableContext<Self>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllerRepresentableContext<Self>.swift"; sourceTree = "<group>"; };
+		A10FEE4A247365E9000835C8 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A10FEE4F247365EC000835C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10FEE52247365EC000835C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A10FEE54247365EC000835C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10FEE5A24737989000835C8 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		A127DC4B2473A10F00A3BDBA /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		A127DC4D2473A26E00A3BDBA /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		A127DC4F2473A50D00A3BDBA /* Label + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label + Extension.swift"; sourceTree = "<group>"; };
+		A127DC512473A61300A3BDBA /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,12 @@
 			children = (
 				A10FEE46247365E9000835C8 /* AppDelegate.swift */,
 				A10FEE48247365E9000835C8 /* SceneDelegate.swift */,
-				A10FEE4A247365E9000835C8 /* UIViewControllerRepresentableContext<Self>.swift */,
+				A10FEE4A247365E9000835C8 /* AuthViewController.swift */,
+				A127DC4F2473A50D00A3BDBA /* Label + Extension.swift */,
+				A10FEE5A24737989000835C8 /* UIButton + Extension.swift */,
+				A127DC4B2473A10F00A3BDBA /* UIFont + Extension.swift */,
+				A127DC4D2473A26E00A3BDBA /* UIColor + Extension.swift */,
+				A127DC512473A61300A3BDBA /* UIImageView + Extension.swift */,
 				A10FEE4F247365EC000835C8 /* Assets.xcassets */,
 				A10FEE51247365EC000835C8 /* LaunchScreen.storyboard */,
 				A10FEE54247365EC000835C8 /* Info.plist */,
@@ -134,9 +149,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10FEE4B247365E9000835C8 /* UIViewControllerRepresentableContext<Self>.swift in Sources */,
+				A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */,
+				A10FEE4B247365E9000835C8 /* AuthViewController.swift in Sources */,
+				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
 				A10FEE47247365E9000835C8 /* AppDelegate.swift in Sources */,
+				A127DC522473A61300A3BDBA /* UIImageView + Extension.swift in Sources */,
+				A127DC4E2473A26E00A3BDBA /* UIColor + Extension.swift in Sources */,
 				A10FEE49247365E9000835C8 /* SceneDelegate.swift in Sources */,
+				A10FEE5B2473798A000835C8 /* UIButton + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
