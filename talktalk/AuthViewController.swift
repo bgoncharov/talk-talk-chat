@@ -17,7 +17,7 @@ class AuthViewController: UIViewController {
     let alreadyOnBoardLabel = UILabel(text: "Already onboard")
     
     let googleButton = UIButton(title: "Google", backgroundColor: .white, titleColor: .black, isShadow: true)
-    let emailButton = UIButton(title: "Email", backgroundColor: .buttonDark(), titleColor: .red)
+    let emailButton = UIButton(title: "Email", backgroundColor: .buttonDark(), titleColor: .white)
     let loginButton = UIButton(title: "Login", backgroundColor: .white, titleColor: .buttonRed(), isShadow: true)
      
 
@@ -30,10 +30,28 @@ class AuthViewController: UIViewController {
     
     private func setupConstraints() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(logoImageView)
         
-        logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160).isActive = true
-        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        let googleView = ButtonFormView(label: googleLabel, button: googleButton)
+        let emailView = ButtonFormView(label: emailLabel, button: emailButton)
+        let loginView = ButtonFormView(label: alreadyOnBoardLabel, button: loginButton)
+        
+        
+        let stackView = UIStackView(arrangedSubViews: [googleView, emailView, loginView], axis: .vertical, spacing: 40)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(logoImageView)
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 160),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+        ])
     }
 }
 
