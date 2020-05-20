@@ -20,6 +20,7 @@
 		A127DC562474AFE200A3BDBA /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC552474AFE200A3BDBA /* ButtonFormView.swift */; };
 		A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC592474B91100A3BDBA /* UIStackView + Extension.swift */; };
 		A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC5B2474C88800A3BDBA /* SignUpViewController.swift */; };
+		A13E64B32474CF4D00060D48 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E64B22474CF4D00060D48 /* OneLineTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A127DC552474AFE200A3BDBA /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		A127DC592474B91100A3BDBA /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		A127DC5B2474C88800A3BDBA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A13E64B22474CF4D00060D48 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A127DC552474AFE200A3BDBA /* ButtonFormView.swift */,
+				A13E64B22474CF4D00060D48 /* OneLineTextField.swift */,
 				A127DC532474AA1D00A3BDBA /* UIKit */,
 			);
 			path = Extensions;
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13E64B32474CF4D00060D48 /* OneLineTextField.swift in Sources */,
 				A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */,
 				A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */,
 				A10FEE4B247365E9000835C8 /* AuthViewController.swift in Sources */,
