@@ -22,6 +22,7 @@
 		A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127DC5B2474C88800A3BDBA /* SignUpViewController.swift */; };
 		A13E64B32474CF4D00060D48 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E64B22474CF4D00060D48 /* OneLineTextField.swift */; };
 		A1A1FE252475F9C800FDB240 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE242475F9C800FDB240 /* LoginViewController.swift */; };
+		A1A1FE2724761A0200FDB240 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE2624761A0200FDB240 /* SetupProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A127DC5B2474C88800A3BDBA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A13E64B22474CF4D00060D48 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		A1A1FE242475F9C800FDB240 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A1A1FE2624761A0200FDB240 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				A10FEE4A247365E9000835C8 /* AuthViewController.swift */,
 				A127DC5B2474C88800A3BDBA /* SignUpViewController.swift */,
 				A1A1FE242475F9C800FDB240 /* LoginViewController.swift */,
+				A1A1FE2624761A0200FDB240 /* SetupProfileViewController.swift */,
 				A127DC542474AA3D00A3BDBA /* Extensions */,
 				A10FEE4F247365EC000835C8 /* Assets.xcassets */,
 				A10FEE51247365EC000835C8 /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */,
 				A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */,
 				A10FEE4B247365E9000835C8 /* AuthViewController.swift in Sources */,
+				A1A1FE2724761A0200FDB240 /* SetupProfileViewController.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,
 				A127DC562474AFE200A3BDBA /* ButtonFormView.swift in Sources */,
