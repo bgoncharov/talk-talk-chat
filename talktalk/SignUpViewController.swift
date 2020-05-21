@@ -42,7 +42,6 @@ class SignUpViewController: UIViewController {
 }
 
 //MARK: - Setup Constraints
-
 extension SignUpViewController {
     private func setupConstraints() {
         let emailStackView = UIStackView(arrangedSubViews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
@@ -93,7 +92,6 @@ extension SignUpViewController {
 }
 
 //MARK: - SwiftUI
-
 import SwiftUI
 
 struct SignUpVCProvider: PreviewProvider {

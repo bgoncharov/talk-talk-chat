@@ -60,7 +60,6 @@ extension AuthViewController {
 }
 
 //MARK: - SwiftUI
-
 import SwiftUI
 
 struct AuthVCProvider: PreviewProvider {

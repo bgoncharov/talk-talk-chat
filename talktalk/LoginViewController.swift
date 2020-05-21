@@ -43,7 +43,6 @@ class LoginViewController: UIViewController {
 }
 
 //MARK: - Setup Constraints
-
 extension LoginViewController {
     private func setupConstraints() {
         let loginWithView = ButtonFormView(label: loginWithLabel, button: googleButton)
@@ -84,7 +83,6 @@ extension LoginViewController {
 }
 
 //MARK: - SwiftUI
-
 import SwiftUI
 
 struct LoginVCProvider: PreviewProvider {

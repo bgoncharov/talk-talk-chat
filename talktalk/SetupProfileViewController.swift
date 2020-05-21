@@ -9,15 +9,32 @@
 import UIKit
 
 class SetupProfileViewController: UIViewController {
+    
+    let fillImageView = AddPhotoView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
+        setupConstraints()
     }
 }
 
-//MARK: - SwiftUI
+// MARK: - Setup constraints
+extension SetupProfileViewController {
+    private func setupConstraints() {
+        
+        fillImageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(fillImageView)
+        
+        NSLayoutConstraint.activate([
+            fillImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            fillImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+}
 
+// MARK: - SwiftUI
 import SwiftUI
 
 struct SetupProfileVCProvider: PreviewProvider {
