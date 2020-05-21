@@ -22,7 +22,13 @@ class SignUpViewController: UIViewController {
     let confirmPasswordTextField = OneLineTextField(font: .avenir20())
     
     let signUpButton = UIButton(title: "Sign up", backgroundColor: .buttonDark(), titleColor: .white, cornerRadius: 4)
-    let loginButton = UIButton()
+    let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Log in", for: .normal)
+        button.setTitleColor(.buttonRed(), for: .normal)
+        button.titleLabel?.font = .avenir20()
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
