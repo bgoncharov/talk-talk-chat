@@ -137,9 +137,9 @@
 		A1A1FE2F2477008900FDB240 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A1A1FE32247704A200FDB240 /* MainTabBarController.swift */,
 				A1A1FE2D2476FD8300FDB240 /* ListViewController.swift */,
 				A1A1FE302477043200FDB240 /* PeopleViewController.swift */,
-				A1A1FE32247704A200FDB240 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
