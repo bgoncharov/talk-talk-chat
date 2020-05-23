@@ -15,7 +15,7 @@ class GradientView: UIView {
     enum Point {
         case topLeading
         case leading
-        case borromLeading
+        case bottomLeading
         case top
         case center
         case bottom
@@ -30,7 +30,7 @@ class GradientView: UIView {
                 return CGPoint(x: 0, y: 0)
             case .leading:
                 return CGPoint(x: 0, y: 0.5)
-            case .borromLeading:
+            case .bottomLeading:
                 return CGPoint(x: 0, y: 1.0)
             case .top:
                 return CGPoint(x: 0.5, y: 0)
@@ -48,12 +48,48 @@ class GradientView: UIView {
         }
     }
     
+    @IBInspectable private var startColor: UIColor? {
+        didSet {
+            setupGradientColor(startColor: startColor, endColor: endColor)
+        }
+    }
+    
+    @IBInspectable private var endColor: UIColor? {
+        didSet {
+            setupGradientColor(startColor: startColor, endColor: endColor)
+        }
+    }
+    
+    init(from: Point, to: Point, startColor: UIColor?, endColor: UIColor?) {
+        self.init()
+        setupGradient(from: from, to: to, startColor: startColor, endColor: endColor)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
     }
     
+    private func setupGradient(from: Point, to: Point, startColor: UIColor?, endColor: UIColor?) {
+        self.layer.addSublayer(gradientLayer)
+        setupGradientColor(startColor: startColor, endColor: endColor)
+        gradientLayer.startPoint = from.point
+        gradientLayer.endPoint = to.point
+    }
+    
+    private func setupGradientColor(startColor: UIColor?, endColor: UIColor?) {
+        if let startColor = startColor, let endColor = endColor {
+            gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+        }
+    }
+
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupGradient(from: .leading, to: .trailing, startColor: startColor, endColor: endColor)
+    }
 }
