@@ -32,6 +32,7 @@
 		A1A1FE382478A89500FDB240 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A1FE362478A89400FDB240 /* waitingChats.json */; };
 		A1A1FE392478A89500FDB240 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A1FE372478A89500FDB240 /* activeChats.json */; };
 		A1A1FE3C2478B81000FDB240 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE3B2478B81000FDB240 /* ActiveChatCell.swift */; };
+		A1A1FE3E24799C6100FDB240 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE3D24799C6100FDB240 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		A1A1FE362478A89400FDB240 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		A1A1FE372478A89500FDB240 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		A1A1FE3B2478B81000FDB240 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		A1A1FE3D24799C6100FDB240 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				A127DC552474AFE200A3BDBA /* ButtonFormView.swift */,
 				A13E64B22474CF4D00060D48 /* OneLineTextField.swift */,
 				A1A1FE342478A75000FDB240 /* Bundle-Decodable.swift */,
+				A1A1FE3D24799C6100FDB240 /* GradientView.swift */,
 				A127DC532474AA1D00A3BDBA /* UIKit */,
 			);
 			path = Extensions;
@@ -238,6 +241,7 @@
 			files = (
 				A1A1FE2E2476FD8300FDB240 /* ListViewController.swift in Sources */,
 				A13E64B32474CF4D00060D48 /* OneLineTextField.swift in Sources */,
+				A1A1FE3E24799C6100FDB240 /* GradientView.swift in Sources */,
 				A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */,
 				A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */,
 				A1A1FE3C2478B81000FDB240 /* ActiveChatCell.swift in Sources */,
