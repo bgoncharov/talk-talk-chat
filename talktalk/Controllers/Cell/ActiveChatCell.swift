@@ -8,13 +8,8 @@
 
 import UIKit
 
-protocol SelfConfigurationCell {
-    static var reusedID: String { get }
-    func configure(with value: MChat)
-}
-
-class ActiveChatCell: UICollectionViewCell, SelfConfigurationCell {
-    static var reusedID: String = "ActiveChatCell"
+class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
+    static var reuseId: String = "ActiveChatCell"
     
     let friendImageView = UIImageView()
     let friendName = UILabel(text: "User name", font: .laoSangamMN20())
@@ -107,6 +102,3 @@ struct ActiveChatProvider: PreviewProvider {
         }
     }
 }
-
-
-
