@@ -1,0 +1,52 @@
+[
+    {
+        "username": "Boris River",
+        "avatarStringURL": "human1",
+        "id": 1
+    },
+    {
+        "username": "Kane Black",
+        "avatarStringURL": "human2",
+        "id": 2
+    },
+    {
+        "username": "Misha Daniels",
+        "avatarStringURL": "human3",
+        "id": 3
+    },
+    {
+        "username": "Alex Film",
+        "avatarStringURL": "human4",
+        "id": 4
+    },
+    {
+        "username": "Robert Johnson",
+        "avatarStringURL": "human5",
+        "id": 5
+    },
+    {
+        "username": "Peter Green",
+        "avatarStringURL": "human6",
+        "id": 6
+    },
+    {
+        "username": "Samanta Human",
+        "avatarStringURL": "human7",
+        "id": 7
+    },
+    {
+        "username": "Melven Strong",
+        "avatarStringURL": "human8",
+        "id": 8
+    },
+    {
+        "username": "Nike Boss",
+        "avatarStringURL": "human9",
+        "id": 9
+    },
+    {
+        "username": "Andy Walve",
+        "avatarStringURL": "human10",
+        "id": 10
+    }
+]
