@@ -16,6 +16,14 @@ class PeopleViewController: UIViewController {
     
     enum Section: Int, CaseIterable {
         case users
+        
+        func description(usersCount: Int) -> String {
+            switch self {
+                
+            case .users:
+                return "\(usersCount) people want to chat"
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -75,6 +83,15 @@ extension PeopleViewController {
                 return cell
             }
         })
+        
+        dataSource?.supplementaryViewProvider = {
+            collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as? SectionHeader else { fatalError("Can not create new section header") }
+            guard let section = Section(rawValue: indexPath.section) else { fatalError("Unkniwn section kind") }
+            let users = self.dataSource.snapshot().itemIdentifiers(inSection: .users)
+            sectionHeader.configure(text: section.description(usersCount: users.count), font: .systemFont(ofSize: 32, weight: .light), textColor: .label)
+            return sectionHeader
+        }
     }
 }
 
@@ -88,8 +105,7 @@ extension PeopleViewController {
             
             switch section {
             case .users:
-                <#code#>
-                
+                return self.createUsersSection()
             }
         }
         
@@ -97,6 +113,31 @@ extension PeopleViewController {
         config.interSectionSpacing = 20
         layout.configuration = config
         return layout
+    }
+    
+    private func createUsersSection() -> NSCollectionLayoutSection {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.6))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+        let spacing = CGFloat(15)
+        group.interItemSpacing = .fixed(spacing)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = spacing
+        section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 15, bottom: 0, trailing: 15)
+        
+        let sectionHeader = createHeaderSection()
+        section.boundarySupplementaryItems = [sectionHeader]
+        return section
+    }
+    
+    private func createHeaderSection() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: sectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        return sectionHeader
     }
 }
 
