@@ -37,6 +37,8 @@
 		A1A1FE422479EFA700FDB240 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE412479EFA700FDB240 /* SelfConfiguringCell.swift */; };
 		A1A1FE45247A073700FDB240 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE44247A073700FDB240 /* SectionHeader.swift */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
+		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
+		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		A1A1FE412479EFA700FDB240 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		A1A1FE44247A073700FDB240 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
+		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			children = (
 				A10FEE46247365E9000835C8 /* AppDelegate.swift */,
 				A10FEE48247365E9000835C8 /* SceneDelegate.swift */,
+				A1C7D6CA247B025A0021AE7E /* Models */,
 				A1A1FE2F2477008900FDB240 /* Controllers */,
 				A1A1FE2C2476FC8400FDB240 /* SignIn&Auth */,
 				A1A1FE432479EFBA00FDB240 /* Protocols */,
@@ -195,6 +200,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		A1C7D6CA247B025A0021AE7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1C7D6C8247B021A0021AE7E /* MUser.swift */,
+				A1C7D6C6247B01E90021AE7E /* MChat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +295,7 @@
 				A1A1FE422479EFA700FDB240 /* SelfConfiguringCell.swift in Sources */,
 				A1A1FE352478A75000FDB240 /* Bundle-Decodable.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
+				A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,
 				A1A1FE2924761F9F00FDB240 /* AddPhotoView.swift in Sources */,
 				A127DC562474AFE200A3BDBA /* ButtonFormView.swift in Sources */,
@@ -291,6 +306,7 @@
 				A127DC522473A61300A3BDBA /* UIImageView + Extension.swift in Sources */,
 				A127DC4E2473A26E00A3BDBA /* UIColor + Extension.swift in Sources */,
 				A10FEE49247365E9000835C8 /* SceneDelegate.swift in Sources */,
+				A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */,
 				A1A1FE252475F9C800FDB240 /* LoginViewController.swift in Sources */,
 				A10FEE5B2473798A000835C8 /* UIButton + Extension.swift in Sources */,
 			);
