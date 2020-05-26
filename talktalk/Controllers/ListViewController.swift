@@ -86,11 +86,9 @@ extension ListViewController {
             switch section {
                 
             case .activeChats:
-                return configure(collectionView: collectionView, cellType: ActiveChatCell.self, with: chat, for: indexPath)
-               // return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
+                return self.configure(collectionView: collectionView, cellType: ActiveChatCell.self, with: chat, for: indexPath)
             case .waitingChats:
-                return configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
-               // return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
+                return self.configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
             }
         })
         
