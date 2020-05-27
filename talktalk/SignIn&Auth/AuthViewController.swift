@@ -32,11 +32,11 @@ class AuthViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
-    @objc func emailButtonTapped() {
+    @objc private func emailButtonTapped() {
         print(#function)
     }
     
-    @objc func loginButtonTapped() {
+    @objc private func loginButtonTapped() {
         print(#function)
     }
 }

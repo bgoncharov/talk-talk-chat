@@ -33,11 +33,14 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(.buttonRed(), for: .normal)
-        loginButton.titleLabel?.font = .avenir20()
         view.backgroundColor = .white
         setupConstraints()
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func signUpButtonTapped() {
+        print(#function)
     }
 }
 
