@@ -19,6 +19,9 @@ class AuthViewController: UIViewController {
     let googleButton = UIButton(title: "Google", backgroundColor: .white, titleColor: .black, isShadow: true)
     let emailButton = UIButton(title: "Email", backgroundColor: .buttonDark(), titleColor: .white)
     let loginButton = UIButton(title: "Login", backgroundColor: .white, titleColor: .buttonRed(), isShadow: true)
+    
+    let SignUpVC = SignUpViewController()
+    let loginVC = LoginViewController()
      
 
     override func viewDidLoad() {
@@ -34,10 +37,12 @@ class AuthViewController: UIViewController {
     
     @objc private func emailButtonTapped() {
         print(#function)
+        present(SignUpVC, animated: true, completion: nil)
     }
     
     @objc private func loginButtonTapped() {
         print(#function)
+        present(loginVC, animated: true, completion: nil)
     }
 }
 

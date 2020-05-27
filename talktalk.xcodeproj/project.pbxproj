@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,7 @@
 		A1A69C4D247DF7AD00ED829D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */; };
 		A1A69C4F247EF8F800ED829D /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */; };
 		A1A69C51247F236A00ED829D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A69C50247F236900ED829D /* GoogleService-Info.plist */; };
+		A1A69C55247F309200ED829D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C54247F309200ED829D /* AuthService.swift */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
 		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
@@ -89,6 +90,7 @@
 		A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		A1A69C50247F236900ED829D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A1A69C54247F309200ED829D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 				5E8BD44B30CE57B0E33DF9E8 /* Pods-talktalk.debug.xcconfig */,
 				2AEB47B52AFCD551EC2E7DCF /* Pods-talktalk.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,7 +142,7 @@
 			children = (
 				A10FEE46247365E9000835C8 /* AppDelegate.swift */,
 				A10FEE48247365E9000835C8 /* SceneDelegate.swift */,
-				A1C7D6CA247B025A0021AE7E /* Models */,
+				A1A69C53247F307400ED829D /* Services */,
 				A1A1FE2F2477008900FDB240 /* Controllers */,
 				A1A1FE2C2476FC8400FDB240 /* SignIn&Auth */,
 				A1A1FE432479EFBA00FDB240 /* Protocols */,
@@ -228,6 +229,15 @@
 				A1A1FE412479EFA700FDB240 /* SelfConfiguringCell.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A1A69C53247F307400ED829D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A1C7D6CA247B025A0021AE7E /* Models */,
+				A1A69C54247F309200ED829D /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A1C7D6C3247B00500021AE7E /* Header */ = {
@@ -404,6 +414,7 @@
 				A127DC4E2473A26E00A3BDBA /* UIColor + Extension.swift in Sources */,
 				A10FEE49247365E9000835C8 /* SceneDelegate.swift in Sources */,
 				A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */,
+				A1A69C55247F309200ED829D /* AuthService.swift in Sources */,
 				A1A1FE252475F9C800FDB240 /* LoginViewController.swift in Sources */,
 				A10FEE5B2473798A000835C8 /* UIButton + Extension.swift in Sources */,
 			);
