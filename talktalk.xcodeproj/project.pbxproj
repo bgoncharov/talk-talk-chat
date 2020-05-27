@@ -39,6 +39,7 @@
 		A1A1FE422479EFA700FDB240 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE412479EFA700FDB240 /* SelfConfiguringCell.swift */; };
 		A1A1FE45247A073700FDB240 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE44247A073700FDB240 /* SectionHeader.swift */; };
 		A1A69C4D247DF7AD00ED829D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */; };
+		A1A69C4F247EF8F800ED829D /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
 		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
@@ -81,6 +82,7 @@
 		A1A1FE412479EFA700FDB240 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		A1A1FE44247A073700FDB240 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				A1A1FE2D2476FD8300FDB240 /* ListViewController.swift */,
 				A1A1FE302477043200FDB240 /* PeopleViewController.swift */,
 				A10C1919247DE15600E776AD /* ProfileViewController.swift */,
+				A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */,
 				A1A1FE3A2478B7F400FDB240 /* Cell */,
 				A1C7D6C3247B00500021AE7E /* Header */,
 			);
@@ -312,6 +315,7 @@
 				A1A1FE352478A75000FDB240 /* Bundle-Decodable.swift in Sources */,
 				A10C191A247DE15600E776AD /* ProfileViewController.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
+				A1A69C4F247EF8F800ED829D /* ChatRequestViewController.swift in Sources */,
 				A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,
 				A1A1FE2924761F9F00FDB240 /* AddPhotoView.swift in Sources */,
