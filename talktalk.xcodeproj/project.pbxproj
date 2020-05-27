@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10C191A247DE15600E776AD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C1919247DE15600E776AD /* ProfileViewController.swift */; };
 		A10FEE47247365E9000835C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE46247365E9000835C8 /* AppDelegate.swift */; };
 		A10FEE49247365E9000835C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE48247365E9000835C8 /* SceneDelegate.swift */; };
 		A10FEE4B247365E9000835C8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FEE4A247365E9000835C8 /* AuthViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10C1919247DE15600E776AD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A10FEE43247365E9000835C8 /* talktalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talktalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10FEE46247365E9000835C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A10FEE48247365E9000835C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				A1A1FE32247704A200FDB240 /* MainTabBarController.swift */,
 				A1A1FE2D2476FD8300FDB240 /* ListViewController.swift */,
 				A1A1FE302477043200FDB240 /* PeopleViewController.swift */,
+				A10C1919247DE15600E776AD /* ProfileViewController.swift */,
 				A1A1FE3A2478B7F400FDB240 /* Cell */,
 				A1C7D6C3247B00500021AE7E /* Header */,
 			);
@@ -300,6 +303,7 @@
 				A1A1FE2724761A0200FDB240 /* SetupProfileViewController.swift in Sources */,
 				A1A1FE422479EFA700FDB240 /* SelfConfiguringCell.swift in Sources */,
 				A1A1FE352478A75000FDB240 /* Bundle-Decodable.swift in Sources */,
+				A10C191A247DE15600E776AD /* ProfileViewController.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
 				A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,
