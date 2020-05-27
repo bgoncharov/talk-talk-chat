@@ -1,0 +1,6 @@
+framework module Pods_talktalk {
+  umbrella header "Pods-talktalk-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -27,6 +27,17 @@ class AuthViewController: UIViewController {
         googleButton.customizeGoogleButton()
         view.backgroundColor = .white
         setupConstraints()
+        
+        emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func emailButtonTapped() {
+        print(#function)
+    }
+    
+    @objc func loginButtonTapped() {
+        print(#function)
     }
 }
 

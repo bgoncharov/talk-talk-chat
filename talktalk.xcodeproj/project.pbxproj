@@ -40,14 +40,19 @@
 		A1A1FE45247A073700FDB240 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1FE44247A073700FDB240 /* SectionHeader.swift */; };
 		A1A69C4D247DF7AD00ED829D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */; };
 		A1A69C4F247EF8F800ED829D /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */; };
+		A1A69C51247F236A00ED829D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A69C50247F236900ED829D /* GoogleService-Info.plist */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
 		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
 		A1C7D6CC247C9A8B0021AE7E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6CB247C9A8B0021AE7E /* UserCell.swift */; };
 		A1C7D6CE247C9D0B0021AE7E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6CD247C9D0B0021AE7E /* UIViewController + Extension.swift */; };
+		BCCEC5770D2031E68864F41E /* Pods_talktalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AEB47B52AFCD551EC2E7DCF /* Pods-talktalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talktalk.release.xcconfig"; path = "Target Support Files/Pods-talktalk/Pods-talktalk.release.xcconfig"; sourceTree = "<group>"; };
+		5E8BD44B30CE57B0E33DF9E8 /* Pods-talktalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talktalk.debug.xcconfig"; path = "Target Support Files/Pods-talktalk/Pods-talktalk.debug.xcconfig"; sourceTree = "<group>"; };
+		78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_talktalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C1919247DE15600E776AD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A10C191B247DF0DA00E776AD /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		A10FEE43247365E9000835C8 /* talktalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talktalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +88,7 @@
 		A1A1FE44247A073700FDB240 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		A1A69C4E247EF8F800ED829D /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
+		A1A69C50247F236900ED829D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -95,17 +101,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCEC5770D2031E68864F41E /* Pods_talktalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0574983C72234DB1CE9A9724 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BD44B30CE57B0E33DF9E8 /* Pods-talktalk.debug.xcconfig */,
+				2AEB47B52AFCD551EC2E7DCF /* Pods-talktalk.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A10FEE3A247365E9000835C8 = {
 			isa = PBXGroup;
 			children = (
 				A10FEE45247365E9000835C8 /* talktalk */,
 				A10FEE44247365E9000835C8 /* Products */,
+				0574983C72234DB1CE9A9724 /* Pods */,
+				FD1123FB86AAAFEC8443622A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +149,7 @@
 				A10FEE4F247365EC000835C8 /* Assets.xcassets */,
 				A10FEE51247365EC000835C8 /* LaunchScreen.storyboard */,
 				A10FEE54247365EC000835C8 /* Info.plist */,
+				A1A69C50247F236900ED829D /* GoogleService-Info.plist */,
 			);
 			path = talktalk;
 			sourceTree = "<group>";
@@ -227,6 +247,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FD1123FB86AAAFEC8443622A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A10FEE57247365EC000835C8 /* Build configuration list for PBXNativeTarget "talktalk" */;
 			buildPhases = (
+				5EFEC2D2A9E1C3D8C32ECD33 /* [CP] Check Pods Manifest.lock */,
 				A10FEE3F247365E9000835C8 /* Sources */,
 				A10FEE40247365E9000835C8 /* Frameworks */,
 				A10FEE41247365E9000835C8 /* Resources */,
+				CBC553543BB00FACADB6EBAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,10 +320,53 @@
 				A10FEE53247365EC000835C8 /* LaunchScreen.storyboard in Resources */,
 				A10FEE50247365EC000835C8 /* Assets.xcassets in Resources */,
 				A1A1FE392478A89500FDB240 /* activeChats.json in Resources */,
+				A1A69C51247F236A00ED829D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EFEC2D2A9E1C3D8C32ECD33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-talktalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC553543BB00FACADB6EBAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A10FEE3F247365E9000835C8 /* Sources */ = {
@@ -466,6 +539,7 @@
 		};
 		A10FEE58247365EC000835C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8BD44B30CE57B0E33DF9E8 /* Pods-talktalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +558,7 @@
 		};
 		A10FEE59247365EC000835C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AEB47B52AFCD551EC2E7DCF /* Pods-talktalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
