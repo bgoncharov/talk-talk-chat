@@ -12,6 +12,7 @@ import FirebaseAuth
 
 class AuthService {
     
+    static let shared = AuthService()
     private let auth = Auth.auth()
     
     func register(email: String?, password: String?, confirmPassword: String?, compleation: @escaping (Result<User, Error>) -> Void) {
