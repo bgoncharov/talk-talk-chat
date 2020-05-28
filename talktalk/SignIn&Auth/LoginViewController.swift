@@ -56,7 +56,9 @@ class LoginViewController: UIViewController {
             switch result {
                 
             case .success(let user):
-                self.showAlert(with: "Success", and: "Now you are log in")
+                self.showAlert(with: "Success!", and: "Now you are log in") {
+                    self.present(MainTabBarController(), animated: true, completion: nil)
+                }
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
             }
