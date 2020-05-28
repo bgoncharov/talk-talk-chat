@@ -15,13 +15,23 @@ class AuthService {
     static let shared = AuthService()
     private let auth = Auth.auth()
     
-    func register(email: String?, password: String?, confirmPassword: String?, compleation: @escaping (Result<User, Error>) -> Void) {
-        auth.createUser(withEmail: email!, password: password!) { (result, error) in
+    func login(email: String?, password: String?, completion: @escaping (Result<User, Error>) -> Void) {
+        auth.signIn(withEmail: email!, password: password!) { (result, error) in
             guard let result = result else {
-                compleation(.failure(error!))
+                completion(.failure(error!))
                 return
             }
-            compleation(.success(result.user))
+            completion(.success(result.user))
+        }
+    }
+    
+    func register(email: String?, password: String?, confirmPassword: String?, completion: @escaping (Result<User, Error>) -> Void) {
+        auth.createUser(withEmail: email!, password: password!) { (result, error) in
+            guard let result = result else {
+                completion(.failure(error!))
+                return
+            }
+            completion(.success(result.user))
         }
     }
 }
