@@ -43,6 +43,7 @@
 		A1A69C51247F236A00ED829D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A69C50247F236900ED829D /* GoogleService-Info.plist */; };
 		A1A69C55247F309200ED829D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C54247F309200ED829D /* AuthService.swift */; };
 		A1A69C57247F3E0B00ED829D /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C56247F3E0B00ED829D /* Validators.swift */; };
+		A1A69C59247F427F00ED829D /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C58247F427F00ED829D /* AuthError.swift */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
 		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
@@ -93,6 +94,7 @@
 		A1A69C50247F236900ED829D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1A69C54247F309200ED829D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A1A69C56247F3E0B00ED829D /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		A1A69C58247F427F00ED829D /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A10FEE45247365E9000835C8 /* talktalk */,
+				A1A69C5A247F464800ED829D /* Helpers */,
 				A10FEE44247365E9000835C8 /* Products */,
 				0574983C72234DB1CE9A9724 /* Pods */,
 				FD1123FB86AAAFEC8443622A /* Frameworks */,
@@ -238,9 +241,17 @@
 			children = (
 				A1C7D6CA247B025A0021AE7E /* Models */,
 				A1A69C54247F309200ED829D /* AuthService.swift */,
-				A1A69C56247F3E0B00ED829D /* Validators.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A1A69C5A247F464800ED829D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A1A69C56247F3E0B00ED829D /* Validators.swift */,
+				A1A69C58247F427F00ED829D /* AuthError.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A1C7D6C3247B00500021AE7E /* Header */ = {
@@ -392,6 +403,7 @@
 				A1A1FE3E24799C6100FDB240 /* GradientView.swift in Sources */,
 				A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */,
 				A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */,
+				A1A69C59247F427F00ED829D /* AuthError.swift in Sources */,
 				A1A1FE3C2478B81000FDB240 /* ActiveChatCell.swift in Sources */,
 				A10FEE4B247365E9000835C8 /* AuthViewController.swift in Sources */,
 				A1A69C57247F3E0B00ED829D /* Validators.swift in Sources */,
