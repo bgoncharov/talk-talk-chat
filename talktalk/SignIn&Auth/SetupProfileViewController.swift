@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SetupProfileViewController: UIViewController {
     
@@ -16,19 +17,47 @@ class SetupProfileViewController: UIViewController {
     let aboutMeLabel = UILabel(text: "About me")
     let sexLabel = UILabel(text: "Sex")
     
+    let fullImageView = AddPhotoView()
     let fullNameTextField = OneLineTextField(font: .avenir20())
     let aboutMeTextField = OneLineTextField(font: .avenir20())
     let sexSegmentedControl = UISegmentedControl(first: "Male", second: "Female")
     
     let goToChatsButton = UIButton(title: "Go to chats!", backgroundColor: .buttonDark(), titleColor: .white, cornerRadius: 4)
     
-    let fullImageView = AddPhotoView()
+    let currentUser: User
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         setupConstraints()
+        goToChatsButton.addTarget(self, action: #selector(goToChatsButtonTapped), for: .touchUpInside)
+    }
+    
+    init(currentUser: User) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func goToChatsButtonTapped() {
+        FirestoreService.shared.saveProfileWith(id: currentUser.uid,
+                                                email: currentUser.email!,
+                                                username: fullNameTextField.text,
+                                                avatarImageString: "nil",
+                                                description: aboutMeTextField.text,
+                                                sex: sexSegmentedControl.titleForSegment(at: sexSegmentedControl.selectedSegmentIndex)) { (result) in
+                                                    switch result {
+                                                        
+                                                    case .success(let muser):
+                                                        self.showAlert(with: "Success", and: "Have a good chating!")
+                                                    case .failure(let error):
+                                                        self.showAlert(with: "E rror", and: error.localizedDescription)
+                                                    }
+        }
     }
 }
 
@@ -102,7 +131,7 @@ struct SetupProfileVCProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let setupProfileVC = SetupProfileViewController()
+        let setupProfileVC = SetupProfileViewController(currentUser: Auth.auth().currentUser!)
         
         func makeUIViewController(context: UIViewControllerRepresentableContext<SetupProfileVCProvider.ContainerView>) -> SetupProfileViewController {
             return setupProfileVC

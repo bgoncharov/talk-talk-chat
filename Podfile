@@ -6,7 +6,8 @@ target 'talktalk' do
   use_frameworks!
 
   # Pods for talktalk
-  pod 'Firebase/Auth'
-  pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+pod 'Firebase/Analytics'
+pod 'Firebase/Firestore'
 
 end

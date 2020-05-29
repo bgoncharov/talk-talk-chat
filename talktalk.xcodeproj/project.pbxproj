@@ -45,6 +45,8 @@
 		A1A69C57247F3E0B00ED829D /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C56247F3E0B00ED829D /* Validators.swift */; };
 		A1A69C59247F427F00ED829D /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A69C58247F427F00ED829D /* AuthError.swift */; };
 		A1C2237024818B7100A7D1AC /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2236F24818B7100A7D1AC /* AuthNavigationDelegate.swift */; };
+		A1C22372248195F000A7D1AC /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C22371248195F000A7D1AC /* FirestoreService.swift */; };
+		A1C223742481A64100A7D1AC /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C223732481A64100A7D1AC /* UserError.swift */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
 		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
@@ -97,6 +99,8 @@
 		A1A69C56247F3E0B00ED829D /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		A1A69C58247F427F00ED829D /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		A1C2236F24818B7100A7D1AC /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
+		A1C22371248195F000A7D1AC /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		A1C223732481A64100A7D1AC /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			children = (
 				A1C7D6CA247B025A0021AE7E /* Models */,
 				A1A69C54247F309200ED829D /* AuthService.swift */,
+				A1C22371248195F000A7D1AC /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			children = (
 				A1A69C56247F3E0B00ED829D /* Validators.swift */,
 				A1A69C58247F427F00ED829D /* AuthError.swift */,
+				A1C223732481A64100A7D1AC /* UserError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				A1C2237024818B7100A7D1AC /* AuthNavigationDelegate.swift in Sources */,
 				A10C191C247DF0DA00E776AD /* InsertableTextField.swift in Sources */,
 				A1A1FE422479EFA700FDB240 /* SelfConfiguringCell.swift in Sources */,
+				A1C22372248195F000A7D1AC /* FirestoreService.swift in Sources */,
 				A1A1FE352478A75000FDB240 /* Bundle-Decodable.swift in Sources */,
 				A10C191A247DE15600E776AD /* ProfileViewController.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
@@ -422,6 +429,7 @@
 				A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,
 				A1A1FE2924761F9F00FDB240 /* AddPhotoView.swift in Sources */,
+				A1C223742481A64100A7D1AC /* UserError.swift in Sources */,
 				A127DC562474AFE200A3BDBA /* ButtonFormView.swift in Sources */,
 				A10FEE47247365E9000835C8 /* AppDelegate.swift in Sources */,
 				A1A69C4D247DF7AD00ED829D /* UIView + Extension.swift in Sources */,
