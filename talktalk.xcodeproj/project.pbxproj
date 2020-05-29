@@ -127,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				A10FEE45247365E9000835C8 /* talktalk */,
-				A1A69C5A247F464800ED829D /* Helpers */,
 				A10FEE44247365E9000835C8 /* Products */,
 				0574983C72234DB1CE9A9724 /* Pods */,
 				FD1123FB86AAAFEC8443622A /* Frameworks */,
@@ -156,6 +155,7 @@
 				A10FEE51247365EC000835C8 /* LaunchScreen.storyboard */,
 				A10FEE54247365EC000835C8 /* Info.plist */,
 				A1A69C50247F236900ED829D /* GoogleService-Info.plist */,
+				A1A69C5A247F464800ED829D /* Helpers */,
 			);
 			path = talktalk;
 			sourceTree = "<group>";
