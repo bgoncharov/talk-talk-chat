@@ -19,7 +19,7 @@ class FirestoreService {
         return db.collection("users")
     }
     
-    func gtUSerData(user: User, completion: @escaping (Result<MUser, Error>) -> Void) {
+    func gtUserData(user: User, completion: @escaping (Result<MUser, Error>) -> Void) {
         let docRef = userRef.document(user.uid)
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
