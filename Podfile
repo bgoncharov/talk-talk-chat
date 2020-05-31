@@ -10,5 +10,6 @@ pod 'Firebase/Auth'
 pod 'Firebase/Analytics'
 pod 'Firebase/Firestore'
 pod 'GoogleSignIn'
+pod 'Firebase/Storage'
 
 end

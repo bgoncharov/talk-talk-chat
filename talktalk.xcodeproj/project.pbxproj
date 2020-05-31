@@ -53,6 +53,7 @@
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
 		A1C7D6CC247C9A8B0021AE7E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6CB247C9A8B0021AE7E /* UserCell.swift */; };
 		A1C7D6CE247C9D0B0021AE7E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6CD247C9D0B0021AE7E /* UIViewController + Extension.swift */; };
+		A1CD6C6C2484388D00A1D48B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6C6B2484388D00A1D48B /* StorageService.swift */; };
 		BCCEC5770D2031E68864F41E /* Pods_talktalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		A1C7D6CB247C9A8B0021AE7E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		A1C7D6CD247C9D0B0021AE7E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		A1CD6C6B2484388D00A1D48B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				A1C7D6CA247B025A0021AE7E /* Models */,
 				A1A69C54247F309200ED829D /* AuthService.swift */,
 				A1C22371248195F000A7D1AC /* FirestoreService.swift */,
+				A1CD6C6B2484388D00A1D48B /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				A127DC562474AFE200A3BDBA /* ButtonFormView.swift in Sources */,
 				A10FEE47247365E9000835C8 /* AppDelegate.swift in Sources */,
 				A1A69C4D247DF7AD00ED829D /* UIView + Extension.swift in Sources */,
+				A1CD6C6C2484388D00A1D48B /* StorageService.swift in Sources */,
 				A1A1FE2B2476F17D00FDB240 /* SegmentedControl + Extension.swift in Sources */,
 				A1A1FE33247704A200FDB240 /* MainTabBarController.swift in Sources */,
 				A1C7D6CC247C9A8B0021AE7E /* UserCell.swift in Sources */,
