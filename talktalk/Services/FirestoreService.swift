@@ -42,6 +42,11 @@ class FirestoreService {
             return
         }
         
+        guard avatarImage != #imageLiteral(resourceName: "avatar") else {
+            completion(.failure(UserError.photoNotExist))
+            return
+        }
+        
         let muser = MUser(username: username!, email: email, avatarStringURL: "not exist", description: description!, sex: sex!, id: id)
         self.userRef.document(muser.id).setData(muser.representation) { (error) in
             if let error = error {
