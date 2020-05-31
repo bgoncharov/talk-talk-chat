@@ -300,6 +300,7 @@
 				A10FEE40247365E9000835C8 /* Frameworks */,
 				A10FEE41247365E9000835C8 /* Resources */,
 				CBC553543BB00FACADB6EBAA /* [CP] Embed Pods Frameworks */,
+				D6D346F6AB2E4671A3CB8FE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,6 +398,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6D346F6AB2E4671A3CB8FE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talktalk/Pods-talktalk-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
