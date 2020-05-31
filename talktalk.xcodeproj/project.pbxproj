@@ -47,6 +47,7 @@
 		A1C2237024818B7100A7D1AC /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2236F24818B7100A7D1AC /* AuthNavigationDelegate.swift */; };
 		A1C22372248195F000A7D1AC /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C22371248195F000A7D1AC /* FirestoreService.swift */; };
 		A1C223742481A64100A7D1AC /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C223732481A64100A7D1AC /* UserError.swift */; };
+		A1C22376248339B000A7D1AC /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C22375248339AF00A7D1AC /* UIApplication + Extension.swift */; };
 		A1C7D6C5247B009F0021AE7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C7D6C4247B009F0021AE7E /* users.json */; };
 		A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C6247B01E90021AE7E /* MChat.swift */; };
 		A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6C8247B021A0021AE7E /* MUser.swift */; };
@@ -101,6 +102,7 @@
 		A1C2236F24818B7100A7D1AC /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
 		A1C22371248195F000A7D1AC /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		A1C223732481A64100A7D1AC /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
+		A1C22375248339AF00A7D1AC /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 		A1C7D6C4247B009F0021AE7E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		A1C7D6C6247B01E90021AE7E /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		A1C7D6C8247B021A0021AE7E /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				A1A69C4C247DF7AD00ED829D /* UIView + Extension.swift */,
 				A10FEE5A24737989000835C8 /* UIButton + Extension.swift */,
 				A1C7D6CD247C9D0B0021AE7E /* UIViewController + Extension.swift */,
+				A1C22375248339AF00A7D1AC /* UIApplication + Extension.swift */,
 				A127DC4B2473A10F00A3BDBA /* UIFont + Extension.swift */,
 				A127DC4D2473A26E00A3BDBA /* UIColor + Extension.swift */,
 				A127DC512473A61300A3BDBA /* UIImageView + Extension.swift */,
@@ -428,6 +431,7 @@
 				A13E64B32474CF4D00060D48 /* OneLineTextField.swift in Sources */,
 				A1A1FE45247A073700FDB240 /* SectionHeader.swift in Sources */,
 				A1A1FE3E24799C6100FDB240 /* GradientView.swift in Sources */,
+				A1C22376248339B000A7D1AC /* UIApplication + Extension.swift in Sources */,
 				A127DC5C2474C88800A3BDBA /* SignUpViewController.swift in Sources */,
 				A127DC4C2473A10F00A3BDBA /* UIFont + Extension.swift in Sources */,
 				A1A69C59247F427F00ED829D /* AuthError.swift in Sources */,

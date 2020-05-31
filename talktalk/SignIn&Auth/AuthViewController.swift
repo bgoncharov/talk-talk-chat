@@ -69,6 +69,7 @@ extension AuthViewController: AuthNavigationDelegate {
     }
 }
 
+//MARK: - GISignInDelegate
 extension AuthViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         AuthService.shared.googleLogin(user: user, error: error) { (result) in
@@ -77,19 +78,20 @@ extension AuthViewController: GIDSignInDelegate {
                 FirestoreService.shared.gtUserData(user: user) { (result) in
                     switch result {
                     case .success(let muser):
-                        self.showAlert(with: "Успешно", and: "Вы авторизованы") {
+                        
+                        UIApplication.getTopViewController()?.showAlert(with: "Success", and: "You are authorized!") {
                             let mainTabBar = MainTabBarController(currentUser: muser)
                             mainTabBar.modalPresentationStyle = .fullScreen
-                            self.present(mainTabBar, animated: true, completion: nil)
+                            UIApplication.getTopViewController()?.present(mainTabBar, animated: true, completion: nil)
                         }
-                    case .failure(let error):
-                        self.showAlert(with: "Успешно", and: "Вы зарегистрированны") {
-                            self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                    case .failure(_):
+                        UIApplication.getTopViewController()?.showAlert(with: "Success", and: "You are registered!") {
+                            UIApplication.getTopViewController()?.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
                         }
-                    } // result
+                    }
                 }
             case .failure(let error):
-                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+                self.showAlert(with: "Error", and: error.localizedDescription)
             }
         }
     }
