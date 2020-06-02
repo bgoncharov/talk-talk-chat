@@ -90,7 +90,13 @@ class FirestoreService {
                 completion(.failure(error))
                 return
             }
-            completion(.success(Void()))
+            messageRef.addDocument(data: message.representation) { (error) in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                completion(.success(Void()))
+            }
         }
     }
 }
