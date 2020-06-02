@@ -55,6 +55,7 @@
 		A1C7D6CE247C9D0B0021AE7E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7D6CD247C9D0B0021AE7E /* UIViewController + Extension.swift */; };
 		A1CD6C6C2484388D00A1D48B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6C6B2484388D00A1D48B /* StorageService.swift */; };
 		A1CD6C6E24843C1700A1D48B /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6C6D24843C1700A1D48B /* UIImage + Extension.swift */; };
+		A1CD6C702485CFDC00A1D48B /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6C6F2485CFDC00A1D48B /* ListenerService.swift */; };
 		BCCEC5770D2031E68864F41E /* Pods_talktalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,7 @@
 		A1C7D6CD247C9D0B0021AE7E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		A1CD6C6B2484388D00A1D48B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A1CD6C6D24843C1700A1D48B /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
+		A1CD6C6F2485CFDC00A1D48B /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				A1A69C54247F309200ED829D /* AuthService.swift */,
 				A1C22371248195F000A7D1AC /* FirestoreService.swift */,
 				A1CD6C6B2484388D00A1D48B /* StorageService.swift */,
+				A1CD6C6F2485CFDC00A1D48B /* ListenerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				A10C191A247DE15600E776AD /* ProfileViewController.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
 				A1A69C4F247EF8F800ED829D /* ChatRequestViewController.swift in Sources */,
+				A1CD6C702485CFDC00A1D48B /* ListenerService.swift in Sources */,
 				A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,
 				A1A1FE2924761F9F00FDB240 /* AddPhotoView.swift in Sources */,
