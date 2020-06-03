@@ -57,6 +57,7 @@
 		A1CD6C6E24843C1700A1D48B /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6C6D24843C1700A1D48B /* UIImage + Extension.swift */; };
 		A1CD6C702485CFDC00A1D48B /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6C6F2485CFDC00A1D48B /* ListenerService.swift */; };
 		A1D6F6162486C82F003B3785 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6F6152486C82E003B3785 /* MMessage.swift */; };
+		A1D6F61824871945003B3785 /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6F61724871945003B3785 /* WaitingChatsNavigation.swift */; };
 		BCCEC5770D2031E68864F41E /* Pods_talktalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		A1CD6C6D24843C1700A1D48B /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		A1CD6C6F2485CFDC00A1D48B /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		A1D6F6152486C82E003B3785 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
+		A1D6F61724871945003B3785 /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			children = (
 				A1A1FE412479EFA700FDB240 /* SelfConfiguringCell.swift */,
 				A1C2236F24818B7100A7D1AC /* AuthNavigationDelegate.swift */,
+				A1D6F61724871945003B3785 /* WaitingChatsNavigation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				A1C7D6C7247B01E90021AE7E /* MChat.swift in Sources */,
 				A1A69C55247F309200ED829D /* AuthService.swift in Sources */,
 				A1A1FE252475F9C800FDB240 /* LoginViewController.swift in Sources */,
+				A1D6F61824871945003B3785 /* WaitingChatsNavigation.swift in Sources */,
 				A10FEE5B2473798A000835C8 /* UIButton + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
