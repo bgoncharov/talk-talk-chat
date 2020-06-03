@@ -10,27 +10,27 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    let welcomeLabel = UILabel(text: "Good to see you", font: .avenir26())
+    let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
     
     let emailLabel = UILabel(text: "Email")
     let passwordLabel = UILabel(text: "Password")
-    let confirmPasswordLabel = UILabel(text: "Confirm password")
-    let alreadyOnBoardLabel = UILabel(text: "Already onvoard?")
+    let confirmPasswodLabel = UILabel(text: "Confirm password")
+    let alreadyOnboardLabel = UILabel(text: "Already onboard?")
     
     let emailTextField = OneLineTextField(font: .avenir20())
     let passwordTextField = OneLineTextField(font: .avenir20())
     let confirmPasswordTextField = OneLineTextField(font: .avenir20())
     
-    let signUpButton = UIButton(title: "Sign up", backgroundColor: .buttonDark(), titleColor: .white, cornerRadius: 4)
+    let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(), cornerRadius: 4)
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Log in", for: .normal)
+        button.setTitle("Login", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
     }()
     
-    weak var delegate: AuthNavigationDelegate?
+    weak var delegate: AuthNavigatingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,22 +41,24 @@ class SignUpViewController: UIViewController {
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
-    
+}
+
+// MARK: - Actions
+extension SignUpViewController {
     @objc private func signUpButtonTapped() {
-        print(#function)
-        AuthService.shared.register(email: emailTextField.text,
-                                    password: passwordTextField.text,
-                                    confirmPassword: confirmPasswordTextField.text) { (result) in
-                                        switch result {
-                                            
-                                        case .success(let user):
-                                            self.showAlert(with: "Done!", and: "You are registered!") {
-                                                self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
-                                            }
-                                            print(user.email)
-                                        case .failure(let error):
-                                            self.showAlert(with: "Error", and: error.localizedDescription)
-                                        }
+        AuthService.shared.register(
+            email: emailTextField.text,
+            password: passwordTextField.text,
+            confirmPassword: confirmPasswordTextField.text) { (result) in
+                switch result {
+                case .success(let user):
+                    self.showAlert(with: "Done!", and: "You are registered!") {
+                        self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                    }
+                    
+                case .failure(let error):
+                    self.showAlert(with: "Error!", and: error.localizedDescription)
+                }
         }
     }
     
@@ -64,30 +66,34 @@ class SignUpViewController: UIViewController {
         self.dismiss(animated: true) {
             self.delegate?.toLoginVC()
         }
-     }
+    }
 }
 
-//MARK: - Setup Constraints
+// MARK: - Setup constraints
 extension SignUpViewController {
     private func setupConstraints() {
-        let emailStackView = UIStackView(arrangedSubViews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
-        let passwordStackView = UIStackView(arrangedSubViews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
-        let confirmPasswordStackView = UIStackView(arrangedSubViews: [confirmPasswordLabel, confirmPasswordTextField], axis: .vertical, spacing: 0)
+        let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
+        let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
+        let confirmPasswordStackView = UIStackView(arrangedSubviews: [confirmPasswodLabel, confirmPasswordTextField], axis: .vertical, spacing: 0)
         
-        signUpButton.heightAnchor.constraint(equalToConstant: 60)
-        
-        let stackView = UIStackView(arrangedSubViews: [emailStackView,
-                                                       passwordStackView,
-                                                       confirmPasswordStackView,
-                                                       signUpButton],
+        signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        let stackView = UIStackView(arrangedSubviews: [
+            emailStackView,
+            passwordStackView,
+            confirmPasswordStackView,
+            signUpButton
+            ],
                                     axis: .vertical,
                                     spacing: 40)
+        
+        
         loginButton.contentHorizontalAlignment = .leading
-        let bottomStackView = UIStackView(arrangedSubViews: [alreadyOnBoardLabel,
-                                                             loginButton],
+        let bottomStackView = UIStackView(arrangedSubviews: [
+            alreadyOnboardLabel,
+            loginButton
+            ],
                                           axis: .horizontal,
                                           spacing: 10)
-        
         bottomStackView.alignment = .firstBaseline
         
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +123,7 @@ extension SignUpViewController {
     }
 }
 
-//MARK: - SwiftUI
+// MARK: - SwiftUI
 import SwiftUI
 
 struct SignUpVCProvider: PreviewProvider {
@@ -139,6 +145,7 @@ struct SignUpVCProvider: PreviewProvider {
     }
 }
 
+
 extension UIViewController {
     
     func showAlert(with title: String, and message: String, completion: @escaping () -> Void = { }) {
@@ -149,4 +156,6 @@ extension UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
+    
 }
+

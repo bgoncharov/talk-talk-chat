@@ -11,11 +11,11 @@ import UIKit
 class ChatRequestViewController: UIViewController {
     
     let containerView = UIView()
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "human5"), contentMode: .scaleAspectFill)
-    let nameLabel = UILabel(text: "Lauren Dev", font: .systemFont(ofSize: 20, weight: .light))
-    let aboutMeLabel = UILabel(text: "Yo are lucky to start a new chat!", font: .systemFont(ofSize: 16, weight: .light))
-    let acceptButton = UIButton(title: "ACCEPT", backgroundColor: .black, font: .laoSangamMN20(), titleColor: .white, isShadow: false, cornerRadius: 10)
-    let denyButton = UIButton(title: "Deny", backgroundColor: .mainWhite(), font: .laoSangamMN20(), titleColor: #colorLiteral(red: 0.8352941176, green: 0.2, blue: 0.2, alpha: 1), isShadow: false, cornerRadius: 10)
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "human2"), contentMode: .scaleAspectFill)
+    let nameLabel = UILabel(text: "Peter Ben", font: .systemFont(ofSize: 20, weight: .light))
+    let aboutMeLabel = UILabel(text: "You have the opportunity to start a new chat", font: .systemFont(ofSize: 16, weight: .light))
+    let acceptButton = UIButton(title: "ACCEPT", titleColor: .white, backgroundColor: .black, font: .laoSangamMN20(), isShadow: false, cornerRadius: 10)
+    let denyButton = UIButton(title: "Deny", titleColor: #colorLiteral(red: 0.8352941176, green: 0.2, blue: 0.2, alpha: 1), backgroundColor: .mainWhite(), font: .laoSangamMN20(), isShadow: false, cornerRadius: 10)
     
     weak var delegate: WaitingChatsNavigation?
     
@@ -41,7 +41,6 @@ class ChatRequestViewController: UIViewController {
         
         denyButton.addTarget(self, action: #selector(denyButtonTapped), for: .touchUpInside)
         acceptButton.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
-
     }
     
     @objc private func denyButtonTapped() {
@@ -57,11 +56,11 @@ class ChatRequestViewController: UIViewController {
     }
     
     private func customizeElements() {
-        containerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         aboutMeLabel.translatesAutoresizingMaskIntoConstraints = false
-
+        
         denyButton.layer.borderWidth = 1.2
         denyButton.layer.borderColor = #colorLiteral(red: 0.8352941176, green: 0.2, blue: 0.2, alpha: 1)
         containerView.backgroundColor = .mainWhite()
@@ -78,10 +77,10 @@ extension ChatRequestViewController {
     private func setupConstraints() {
         view.addSubview(imageView)
         view.addSubview(containerView)
-        view.addSubview(nameLabel)
-        view.addSubview(aboutMeLabel)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(aboutMeLabel)
         
-        let buttonsStackView = UIStackView(arrangedSubViews: [acceptButton, denyButton], axis: .horizontal, spacing: 7)
+        let buttonsStackView = UIStackView(arrangedSubviews: [acceptButton, denyButton], axis: .horizontal, spacing: 7)
         buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
         buttonsStackView.distribution = .fillEqually
         containerView.addSubview(buttonsStackView)
@@ -118,6 +117,5 @@ extension ChatRequestViewController {
             buttonsStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24),
             buttonsStackView.heightAnchor.constraint(equalToConstant: 56)
         ])
-        
     }
 }

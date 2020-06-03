@@ -23,7 +23,7 @@ class SetupProfileViewController: UIViewController {
     let aboutMeTextField = OneLineTextField(font: .avenir20())
     let sexSegmentedControl = UISegmentedControl(first: "Male", second: "Female")
     
-    let goToChatsButton = UIButton(title: "Go to chats!", backgroundColor: .buttonDark(), titleColor: .white, cornerRadius: 4)
+    let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .buttonDark(), cornerRadius: 4)
     
     let currentUser: User
     
@@ -95,26 +95,26 @@ extension SetupProfileViewController: UINavigationControllerDelegate, UIImagePic
 extension SetupProfileViewController {
     private func setupConstraints() {
         
-        let fullNameStackView = UIStackView(arrangedSubViews: [
+        let fullNameStackView = UIStackView(arrangedSubviews: [
             fullNameLabel,
             fullNameTextField],
                                             axis: .vertical,
                                             spacing: 0)
         
-        let aboutMeStackView = UIStackView(arrangedSubViews: [
+        let aboutMeStackView = UIStackView(arrangedSubviews: [
             aboutMeLabel,
             aboutMeTextField],
                                            axis: .vertical,
                                            spacing: 0)
         
-        let sexStackView = UIStackView(arrangedSubViews: [
+        let sexStackView = UIStackView(arrangedSubviews: [
             sexLabel,
             sexSegmentedControl],
                                        axis: .vertical,
                                        spacing: 12)
         
         goToChatsButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        let stackView = UIStackView(arrangedSubViews: [
+        let stackView = UIStackView(arrangedSubviews: [
             fullNameStackView,
             aboutMeStackView,
             sexStackView,

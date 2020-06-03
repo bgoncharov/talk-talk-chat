@@ -69,7 +69,7 @@ class ListViewController: UIViewController {
                 self.waitingChats = chats
                 self.reloadData()
             case .failure(let error):
-                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                self.showAlert(with: "Error!", and: error.localizedDescription)
             }
         })
         
@@ -79,7 +79,7 @@ class ListViewController: UIViewController {
                 self.activeChats = chats
                 self.reloadData()
             case .failure(let error):
-                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                self.showAlert(with: "Error!", and: error.localizedDescription)
             }
         })
     }
@@ -242,14 +242,15 @@ extension ListViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - WaitingChatsNavigation
 extension ListViewController: WaitingChatsNavigation {
     func removeWaitingChat(chat: MChat) {
         FirestoreService.shared.deleteWaitingChat(chat: chat) { (result) in
             switch result {
             case .success:
-                self.showAlert(with: "Успешно!", and: "Чат с \(chat.friendUsername) был удален")
+                self.showAlert(with: "Success!", and: "Chat with \(chat.friendUsername) deleted")
             case .failure(let error):
-                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                self.showAlert(with: "Error!", and: error.localizedDescription)
             }
         }
     }
@@ -259,9 +260,9 @@ extension ListViewController: WaitingChatsNavigation {
         FirestoreService.shared.changeToActive(chat: chat) { (result) in
             switch result {
             case .success:
-                self.showAlert(with: "Успешно!", and: "Приятного общения с \(chat.friendUsername).")
+                self.showAlert(with: "Success!", and: "Have a naci chating with \(chat.friendUsername).")
             case .failure(let error):
-                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                self.showAlert(with: "Error!", and: error.localizedDescription)
             }
         }
     }

@@ -10,31 +10,28 @@ import UIKit
 import GoogleSignIn
 
 class LoginViewController: UIViewController {
+    
     let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
     
     let loginWithLabel = UILabel(text: "Login with")
     let orLabel = UILabel(text: "or")
     let emailLabel = UILabel(text: "Email")
     let passwordLabel = UILabel(text: "Password")
-    let needAnAccount = UILabel(text: "Need an account")
-
-    let googleButton = UIButton(title: "Google", backgroundColor: .white, titleColor: .black, isShadow: true)
-
+    let needAnAccountLabel = UILabel(text: "Need an account?")
+    
+    let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadow: true)
     let emailTextField = OneLineTextField(font: .avenir20())
     let passwordTextField = OneLineTextField(font: .avenir20())
-
-    let loginButton = UIButton(title: "Login", backgroundColor: .buttonDark(), titleColor: .white)
-    
+    let loginButton = UIButton(title: "Login", titleColor: .white, backgroundColor: .buttonDark())
     let signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Sign in", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
     }()
     
-    weak var delegate: AuthNavigationDelegate?
-    
+    weak var delegate: AuthNavigatingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,33 +39,44 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         googleButton.customizeGoogleButton()
         setupConstraints()
+        
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         googleButton.addTarget(self, action: #selector(googleButtonTapped), for: .touchUpInside)
     }
     
+    
+}
+
+// MARK: - Actions
+extension LoginViewController {
+    
+    @objc private func googleButtonTapped() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
     @objc private func loginButtonTapped() {
-        print(#function)
-        AuthService.shared.login(email: emailTextField.text, password: passwordTextField.text) { (result) in
-            switch result {
-                
-            case .success(let user):
-                self.showAlert(with: "Success!", and: "Now you are log in") {
-                    FirestoreService.shared.getUserData(user: user) { (result) in
-                        switch result {
-                            
-                        case .success(let muser):
-                            let mainTabBar = MainTabBarController(currentUser: muser)
-                            mainTabBar.modalPresentationStyle = .fullScreen
-                            self.present(mainTabBar, animated: true, completion: nil)
-                        case .failure(let error):
-                            self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+        AuthService.shared.login(
+            email: emailTextField.text!,
+            password: passwordTextField.text!) { (result) in
+                switch result {
+                case .success(let user):
+                    self.showAlert(with: "Успешно!", and: "Вы авторизованы!") {
+                        FirestoreService.shared.getUserData(user: user) { (result) in
+                            switch result {
+                            case .success(let muser):
+                                let mainTabBar = MainTabBarController(currentUser: muser)
+                                mainTabBar.modalPresentationStyle = .fullScreen
+                                self.present(mainTabBar, animated: true, completion: nil)
+                            case .failure(_):
+                                self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                            }
                         }
                     }
+                case .failure(let error):
+                    self.showAlert(with: "Ошибка!", and: error.localizedDescription)
                 }
-            case .failure(let error):
-                self.showAlert(with: "Error", and: error.localizedDescription)
-            }
         }
     }
     
@@ -77,32 +85,43 @@ class LoginViewController: UIViewController {
             self.delegate?.toSignUpVC()
         }
     }
-     
-    @objc private func googleButtonTapped() {
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
-    }
 }
 
-//MARK: - Setup Constraints
+// MARK: - Setup constraints
 extension LoginViewController {
     private func setupConstraints() {
         let loginWithView = ButtonFormView(label: loginWithLabel, button: googleButton)
-        let emailStackView = UIStackView(arrangedSubViews: [orLabel, emailLabel, emailTextField], axis: .vertical, spacing: 0)
-        let passwordStackView = UIStackView(arrangedSubViews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
-        let stackView = UIStackView(arrangedSubViews: [loginWithView, orLabel, emailStackView, passwordStackView, loginButton], axis: .vertical, spacing: 40)
+        let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField],
+                                         axis: .vertical,
+                                         spacing: 0)
+        let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField],
+        axis: .vertical,
+        spacing: 0)
+        
+        loginButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        let stackView = UIStackView(arrangedSubviews: [
+            loginWithView,
+            orLabel,
+            emailStackView,
+            passwordStackView,
+            loginButton
+            ],
+                                    axis: .vertical,
+                                    spacing: 40)
         
         signUpButton.contentHorizontalAlignment = .leading
-        let bottomStackView = UIStackView(arrangedSubViews: [needAnAccount, signUpButton], axis: .horizontal, spacing: 10)
+        let bottomStackView = UIStackView(arrangedSubviews: [needAnAccountLabel, signUpButton],
+                                          axis: .horizontal,
+                                          spacing: 10)
         bottomStackView.alignment = .firstBaseline
-        
-        view.addSubview(welcomeLabel)
-        view.addSubview(stackView)
-        view.addSubview(bottomStackView)
         
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(welcomeLabel)
+        view.addSubview(stackView)
+        view.addSubview(bottomStackView)
         
         NSLayoutConstraint.activate([
             welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
@@ -120,11 +139,10 @@ extension LoginViewController {
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
-        
     }
 }
 
-//MARK: - SwiftUI
+// MARK: - SwiftUI
 import SwiftUI
 
 struct LoginVCProvider: PreviewProvider {

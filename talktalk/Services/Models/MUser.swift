@@ -6,7 +6,7 @@
 //  Copyright © 2020 Boris Goncharov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseFirestore
 
 struct MUser: Hashable, Decodable {
@@ -37,7 +37,7 @@ struct MUser: Hashable, Decodable {
     }
     
     init?(document: DocumentSnapshot) {
-        guard let data = document.data() else { return nil }
+        guard let data = document.data() else { return nil}
         guard let username = data["username"] as? String,
         let email = data["email"] as? String,
         let avatarStringURL = data["avatarStringURL"] as? String,
@@ -81,7 +81,7 @@ struct MUser: Hashable, Decodable {
     func contains(filter: String?) -> Bool {
         guard let filter = filter else { return true }
         if filter.isEmpty { return true }
-        let lowerCasedFilter = filter.lowercased()
-        return username.lowercased().contains(lowerCasedFilter)
+        let lowercasedFilter = filter.lowercased()
+        return username.lowercased().contains(lowercasedFilter)
     }
 }

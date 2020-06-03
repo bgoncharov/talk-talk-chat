@@ -88,7 +88,7 @@ class FirestoreService {
         let message = MMessage(user: currentUser, content: message)
         let chat = MChat(friendUsername: currentUser.username,
                          friendAvatarStringURL: currentUser.avatarStringURL,
-                         lastMessageContent: message.content, friendId: currentUser.id)
+                         friendId: currentUser.id, lastMessageContent: message.content)
         
         reference.document(currentUser.id).setData(chat.representation) { (error) in
             if let error = error {

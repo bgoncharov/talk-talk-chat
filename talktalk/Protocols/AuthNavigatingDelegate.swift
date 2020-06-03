@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AuthNavigationDelegate: class {
+protocol AuthNavigatingDelegate: class {
     func toLoginVC()
     func toSignUpVC()
 }

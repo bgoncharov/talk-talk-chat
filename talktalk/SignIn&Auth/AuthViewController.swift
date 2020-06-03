@@ -17,9 +17,9 @@ class AuthViewController: UIViewController {
     let emailLabel = UILabel(text: "Or sign up with")
     let alreadyOnBoardLabel = UILabel(text: "Already onboard")
     
-    let googleButton = UIButton(title: "Google", backgroundColor: .white, titleColor: .black, isShadow: true)
-    let emailButton = UIButton(title: "Email", backgroundColor: .buttonDark(), titleColor: .white)
-    let loginButton = UIButton(title: "Login", backgroundColor: .white, titleColor: .buttonRed(), isShadow: true)
+    let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadow: true)
+    let emailButton = UIButton(title: "Email", titleColor: .white, backgroundColor: .buttonDark())
+    let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadow: true)
     
     let signUpVC = SignUpViewController()
     let loginVC = LoginViewController()
@@ -59,7 +59,7 @@ class AuthViewController: UIViewController {
     }
 }
 
-extension AuthViewController: AuthNavigationDelegate {
+extension AuthViewController: AuthNavigatingDelegate {
     func toLoginVC() {
         present(loginVC, animated: true, completion: nil)
     }
@@ -107,7 +107,7 @@ extension AuthViewController {
         let loginView = ButtonFormView(label: alreadyOnBoardLabel, button: loginButton)
         
         
-        let stackView = UIStackView(arrangedSubViews: [googleView, emailView, loginView], axis: .vertical, spacing: 40)
+        let stackView = UIStackView(arrangedSubviews: [googleView, emailView, loginView], axis: .vertical, spacing: 40)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(logoImageView)

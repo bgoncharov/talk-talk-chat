@@ -9,6 +9,7 @@
 import UIKit
 
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
+    
     static var reuseId: String = "ActiveChatCell"
     
     let friendImageView = UIImageView()
@@ -18,8 +19,8 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupConstraints()
         backgroundColor = .white
+        setupConstraints()
         
         self.layer.cornerRadius = 4
         self.clipsToBounds = true
@@ -27,11 +28,18 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     
     func configure<U>(with value: U) where U : Hashable {
         guard let chat: MChat = value as? MChat else { return }
-        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
         friendName.text = chat.friendUsername
         lastMessage.text = chat.lastMessageContent
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - Setup constraints
+extension ActiveChatCell {
     private func setupConstraints() {
         friendImageView.translatesAutoresizingMaskIntoConstraints = false
         friendName.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +53,6 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         addSubview(gradientView)
         addSubview(friendName)
         addSubview(lastMessage)
-
         
         NSLayoutConstraint.activate([
             friendImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -61,7 +68,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         ])
         
         NSLayoutConstraint.activate([
-            lastMessage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -14),
+            lastMessage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12),
             lastMessage.leadingAnchor.constraint(equalTo: friendImageView.trailingAnchor, constant: 16),
             lastMessage.trailingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: 16)
         ])
@@ -72,13 +79,6 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
             gradientView.heightAnchor.constraint(equalToConstant: 78),
             gradientView.widthAnchor.constraint(equalToConstant: 8)
         ])
-        
-        
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -99,7 +99,6 @@ struct ActiveChatProvider: PreviewProvider {
         }
         
         func updateUIViewController(_ uiViewController: ActiveChatProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ActiveChatProvider.ContainerView>) {
-            
         }
     }
 }

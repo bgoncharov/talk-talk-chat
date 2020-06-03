@@ -16,14 +16,14 @@ struct MChat: Hashable, Decodable {
     var friendId: String
     
     var representation: [String : Any] {
-        var rep = ["friendsUsrname" : friendUsername]
+        var rep = ["friendUsername": friendUsername]
         rep["friendAvatarStringURL"] = friendAvatarStringURL
         rep["friendId"] = friendId
         rep["lastMessage"] = lastMessageContent
         return rep
     }
     
-    init(friendUsername: String, friendAvatarStringURL: String, lastMessageContent:String, friendId: String) {
+    init(friendUsername: String, friendAvatarStringURL: String, friendId: String, lastMessageContent: String) {
         self.friendUsername = friendUsername
         self.friendAvatarStringURL = friendAvatarStringURL
         self.friendId = friendId

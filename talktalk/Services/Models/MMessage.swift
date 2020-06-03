@@ -11,7 +11,7 @@ import FirebaseFirestore
 import MessageKit
 
 struct MMessage: Hashable, MessageType {
-
+   
     let content: String
     var sender: SenderType
     var sentDate: Date
@@ -34,21 +34,21 @@ struct MMessage: Hashable, MessageType {
     
     init?(document: QueryDocumentSnapshot) {
         let data = document.data()
-        guard let sendDate = data["created"] as? Timestamp else { return nil}
-        guard let senderId = data["senderId"] as? String else { return nil}
-        guard let senderName = data["senderUsername"] as? String else { return nil}
-        guard let content = data["content"] as? String else { return nil}
+        guard let sentDate = data["created"] as? Timestamp else { return nil }
+        guard let senderId = data["senderID"] as? String else { return nil }
+        guard let senderName = data["senderName"] as? String else { return nil }
+        guard let content = data["content"] as? String else { return nil }
         
         self.id = document.documentID
-        self.sentDate = sendDate.dateValue()
+        self.sentDate = sentDate.dateValue()
         sender = Sender(senderId: senderId, displayName: senderName)
         self.content = content
     }
     
     var representation: [String: Any] {
-        var rep: [String: Any] = [
+        let rep: [String: Any] = [
             "created": sentDate,
-            "senderId": sender.senderId,
+            "senderID": sender.senderId,
             "senderName": sender.displayName,
             "content": content
         ]
@@ -61,5 +61,5 @@ struct MMessage: Hashable, MessageType {
     
     static func == (lhs: MMessage, rhs: MMessage) -> Bool {
         return lhs.messageId == rhs.messageId
-     }
+    }
 }

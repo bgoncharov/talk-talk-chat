@@ -9,7 +9,6 @@
 import UIKit
 
 class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
-    
     static var reuseId: String = "WaitingChatCell"
     
     let friendImageView = UIImageView()
