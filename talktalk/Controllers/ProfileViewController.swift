@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController {
     let aboutMeLabel = UILabel(text: "Yo are lucky to chat with the best girl in thу world!", font: .systemFont(ofSize: 16, weight: .light))
     let myTextField = InsertableTextField()
     
-    private let user: MUser
+   private let user: MUser
     
     init(user: MUser) {
         self.user = user
@@ -34,17 +34,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        customizeElements()
+        constomizeElements()
         setupConstraints()
     }
     
-    private func customizeElements() {
-        containerView.translatesAutoresizingMaskIntoConstraints = false
+    private func constomizeElements() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         aboutMeLabel.translatesAutoresizingMaskIntoConstraints = false
         myTextField.translatesAutoresizingMaskIntoConstraints = false
-        
         aboutMeLabel.numberOfLines = 0
         containerView.backgroundColor = .mainWhite()
         containerView.layer.cornerRadius = 30
@@ -74,12 +73,13 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController {
+    
     private func setupConstraints() {
         view.addSubview(imageView)
         view.addSubview(containerView)
-        view.addSubview(nameLabel)
-        view.addSubview(aboutMeLabel)
-        view.addSubview(myTextField)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(aboutMeLabel)
+        containerView.addSubview(myTextField)
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.topAnchor),

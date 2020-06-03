@@ -18,7 +18,7 @@ class AuthService {
     
     func login(email: String?, password: String?, completion: @escaping (Result<User, Error>) -> Void) {
         
-        guard let  email = email, let password = password else {
+        guard let email = email, let password = password else {
             completion(.failure(AuthError.notFilled))
             return
         }
@@ -37,7 +37,6 @@ class AuthService {
             completion(.failure(error))
             return
         }
-        
         guard let auth = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
         
@@ -52,17 +51,17 @@ class AuthService {
     
     func register(email: String?, password: String?, confirmPassword: String?, completion: @escaping (Result<User, Error>) -> Void) {
         
-        guard Validators.isFilled(email: email, password: password, confirmedPassword: confirmPassword) else {
+        guard Validators.isFilled(email: email, password: password, confirmPassword: confirmPassword) else {
             completion(.failure(AuthError.notFilled))
             return
         }
         
-        guard password?.lowercased() == confirmPassword?.lowercased() else {
+        guard password!.lowercased() == confirmPassword!.lowercased() else {
             completion(.failure(AuthError.passwordsNotMatched))
             return
         }
         
-        guard Validators.isSimleEmail(email!) else {
+        guard Validators.isSimpleEmail(email!) else {
             completion(.failure(AuthError.invalidEmail))
             return
         }
