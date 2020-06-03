@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
                 
             case .success(let user):
                 self.showAlert(with: "Success!", and: "Now you are log in") {
-                    FirestoreService.shared.gtUserData(user: user) { (result) in
+                    FirestoreService.shared.getUserData(user: user) { (result) in
                         switch result {
                             
                         case .success(let muser):

@@ -56,7 +56,7 @@ class PeopleViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(signOut))
         
-        usersListener = ListenerService.shared.userObserve(users: users, completion: { (result) in
+        usersListener = ListenerService.shared.usersObserve(users: users, completion: { (result) in
             switch result {
                 
             case .success(let users):
