@@ -62,7 +62,7 @@ extension LoginViewController {
             password: passwordTextField.text!) { (result) in
                 switch result {
                 case .success(let user):
-                    self.showAlert(with: "Успешно!", and: "Вы авторизованы!") {
+                    self.showAlert(with: "Succcess!", and: "You are authorized!") {
                         FirestoreService.shared.getUserData(user: user) { (result) in
                             switch result {
                             case .success(let muser):
@@ -75,7 +75,7 @@ extension LoginViewController {
                         }
                     }
                 case .failure(let error):
-                    self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                    self.showAlert(with: "Error!", and: error.localizedDescription)
                 }
         }
     }
