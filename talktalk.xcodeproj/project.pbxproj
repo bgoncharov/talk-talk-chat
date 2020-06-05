@@ -59,6 +59,7 @@
 		A1D6F6162486C82F003B3785 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6F6152486C82E003B3785 /* MMessage.swift */; };
 		A1D6F61824871945003B3785 /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6F61724871945003B3785 /* WaitingChatsNavigation.swift */; };
 		A1D6F61A24881042003B3785 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6F61924881042003B3785 /* ChatsViewController.swift */; };
+		A1EAE5B82489FC0600BF7A5E /* UIScrollView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EAE5B72489FC0600BF7A5E /* UIScrollView + Extension.swift */; };
 		BCCEC5770D2031E68864F41E /* Pods_talktalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC8EDB6AE2195C3AFD597D /* Pods_talktalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		A1D6F6152486C82E003B3785 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		A1D6F61724871945003B3785 /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
 		A1D6F61924881042003B3785 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		A1EAE5B72489FC0600BF7A5E /* UIScrollView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				A127DC4D2473A26E00A3BDBA /* UIColor + Extension.swift */,
 				A127DC512473A61300A3BDBA /* UIImageView + Extension.swift */,
 				A1CD6C6D24843C1700A1D48B /* UIImage + Extension.swift */,
+				A1EAE5B72489FC0600BF7A5E /* UIScrollView + Extension.swift */,
 				A127DC592474B91100A3BDBA /* UIStackView + Extension.swift */,
 				A1A1FE2A2476F17D00FDB240 /* SegmentedControl + Extension.swift */,
 			);
@@ -466,6 +469,7 @@
 				A10C191A247DE15600E776AD /* ProfileViewController.swift in Sources */,
 				A127DC502473A50D00A3BDBA /* Label + Extension.swift in Sources */,
 				A1A69C4F247EF8F800ED829D /* ChatRequestViewController.swift in Sources */,
+				A1EAE5B82489FC0600BF7A5E /* UIScrollView + Extension.swift in Sources */,
 				A1CD6C702485CFDC00A1D48B /* ListenerService.swift in Sources */,
 				A1C7D6C9247B021A0021AE7E /* MUser.swift in Sources */,
 				A127DC5A2474B91100A3BDBA /* UIStackView + Extension.swift in Sources */,

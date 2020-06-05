@@ -23,12 +23,12 @@ struct MMessage: Hashable, MessageType {
     var sender: SenderType
     var sentDate: Date
     let id: String?
+    
     var messageId: String {
         return id ?? UUID().uuidString
     }
     
     var kind: MessageKind {
-       // return .text(content)
         if let image = image {
             let mediaItem = ImageItem(url: nil, image: nil, placeholderImage: image, size: image.size)
             return .photo(mediaItem)
@@ -74,13 +74,13 @@ struct MMessage: Hashable, MessageType {
         } else {
             return nil
         }
-     }
+    }
     
     var representation: [String: Any] {
         var rep: [String: Any] = [
             "created": sentDate,
             "senderID": sender.senderId,
-            "senderName": sender.displayName,
+            "senderName": sender.displayName
         ]
         
         if let url = downloadURL {
