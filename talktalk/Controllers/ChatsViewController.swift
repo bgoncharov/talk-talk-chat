@@ -16,8 +16,8 @@ class ChatsViewController: MessagesViewController {
     private var messages: [MMessage] = []
     private var messageListener: ListenerRegistration?
     
-    var user: MUser
-    var chat: MChat
+    private let user: MUser
+    private let chat: MChat
     
     init(user: MUser, chat: MChat) {
         self.user = user
@@ -43,6 +43,8 @@ class ChatsViewController: MessagesViewController {
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
             layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
             layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+            layout.photoMessageSizeCalculator.incomingAvatarSize = .zero
+            layout.photoMessageSizeCalculator.outgoingAvatarSize = .zero
         }
         
         messagesCollectionView.backgroundColor = .mainWhite()
@@ -53,11 +55,25 @@ class ChatsViewController: MessagesViewController {
         
         messageListener = ListenerService.shared.messagesObserve(chat: chat, completion: { (result) in
             switch result {
+            case .success(var message):
+                if let url = message.downloadURL {
+                    StorageService.shared.downloadImage(url: url) { [weak self] (result) in
+                        guard let self = self else { return }
+                        switch result {
+                            
+                        case .success(let image):
+                            message.image = image
+                            self.insertNewMessage(message: message)
+                        case .failure(let error):
+                            self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                        }
+                    }
+                } else {
+                    self.insertNewMessage(message: message)
+                }
                 
-            case .success(let message):
-                self.insertNewMessage(message: message)
             case .failure(let error):
-                self.showAlert(with: "Error", and: error.localizedDescription)
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
             }
         })
     }
@@ -88,6 +104,7 @@ class ChatsViewController: MessagesViewController {
         } else {
             picker.sourceType = .photoLibrary
         }
+        
         present(picker, animated: true, completion: nil)
     }
     
@@ -96,41 +113,20 @@ class ChatsViewController: MessagesViewController {
             switch result {
                 
             case .success(let url):
-                <#code#>
+                var message = MMessage(user: self.user, image: image)
+                message.downloadURL = url
+                FirestoreService.shared.sendMessage(chat: self.chat, message: message) { (result) in
+                    switch result {
+                        
+                    case .success:
+                        self.messagesCollectionView.scrollToBottom()
+                    case .failure(_):
+                        self.showAlert(with: "Error!", and: "Error with image")
+                    }
+                }
             case .failure(let error):
-                self.showAlert(with: "Error", and: error.localizedDescription)
+                self.showAlert(with: "Error!", and: error.localizedDescription)
             }
-        }
-    }
-}
-
-// MARK: - MessagesDataSource
-extension ChatsViewController: MessagesDataSource {
-    func currentSender() -> SenderType {
-        return Sender(senderId: user.id, displayName: user.username)
-    }
-    
-    func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        return messages[indexPath.item]
-    }
-    
-    func numberOfItems(inSection section: Int, in messagesCollectionView: MessagesCollectionView) -> Int {
-        return messages.count
-    }
-    
-    func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        return 1
-    }
-    
-    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        if indexPath.item % 4 == 0 {
-            return NSAttributedString(
-            string: MessageKitDateFormatter.shared.string(from: message.sentDate),
-            attributes: [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10),
-            NSAttributedString.Key.foregroundColor: UIColor.darkGray])
-        } else {
-            return nil
         }
     }
 }
@@ -190,6 +186,37 @@ extension ChatsViewController {
     }
 }
 
+// MARK: - MessagesDataSource
+extension ChatsViewController: MessagesDataSource {
+    func currentSender() -> SenderType {
+        return Sender(senderId: user.id, displayName: user.username)
+    }
+    
+    func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
+        return messages[indexPath.item]
+    }
+    
+    func numberOfItems(inSection section: Int, in messagesCollectionView: MessagesCollectionView) -> Int {
+        return messages.count
+    }
+    
+    func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
+        return 1
+    }
+    
+    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        if indexPath.item % 4 == 0 {
+            return NSAttributedString(
+            string: MessageKitDateFormatter.shared.string(from: message.sentDate),
+            attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10),
+            NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        } else {
+            return nil
+        }
+    }
+}
+
 // MARK: - MessagesLayoutDelegate
 extension ChatsViewController: MessagesLayoutDelegate {
     func footerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
@@ -205,6 +232,7 @@ extension ChatsViewController: MessagesLayoutDelegate {
     }
 }
 
+// MARK: - MessagesDisplayDelegate
 extension ChatsViewController: MessagesDisplayDelegate {
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .white : #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1)
@@ -227,22 +255,23 @@ extension ChatsViewController: MessagesDisplayDelegate {
     }
 }
 
+// MARK: - MessageInputBarDelegate
 extension ChatsViewController: InputBarAccessoryViewDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         let message = MMessage(user: user, content: text)
         FirestoreService.shared.sendMessage(chat: chat, message: message) { (result) in
             switch result {
-                
             case .success:
                 self.messagesCollectionView.scrollToBottom()
             case .failure(let error):
-                self.showAlert(with: "Error", and: error.localizedDescription)
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
             }
         }
         inputBar.inputTextView.text = ""
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate
 extension ChatsViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
