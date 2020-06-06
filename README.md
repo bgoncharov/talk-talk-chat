@@ -1,1 +1,1 @@
-# talk-talk -- real-time chat with image/text messages.
+# Talk-Talk - real-time chat with image/text messages.
