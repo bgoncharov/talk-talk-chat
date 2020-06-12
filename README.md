@@ -10,4 +10,4 @@ Then according my Sketch file I was implement four screens for Sign in, Registra
 
 Next step was implementation of "Chats" screen with a beutiful interface. I was using Collecition View Compositional Layout and Diffable Data Source here. It helped me to implement UICollectionView with two kinds of sections. The firs section responsible for Active chats and the second for Waiting chats.
 
-Then I made "Nearby people" also using Collecition View Compositional Layout and Diffable Data Source. I was testing those screnns with fake data I created in json files.
+Then I made "Nearby people" screen also using Collecition View Compositional Layout and Diffable Data Source. I was testing those screnns with fake data I created in json files.
