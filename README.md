@@ -6,7 +6,7 @@ This project made with MVC design pattern. I use Firebase as a backend service. 
 
 ![Sketch](https://github.com/bgoncharov/Images/blob/master/talk-talk/talk-talks-sketch.jpg)
 
-Then according my Sketch file I was implement four screens for Sign in, Registration and Setup profile options. All screens was made using NSLayoutConstraint and I didn't use Storyboard. 
+Then according to my Sketch file I was implement four screens for Sign in, Registration and Setup profile options. All screens was made using NSLayoutConstraint and I didn't use Storyboard. 
 
 Next step was implementation of "Chats" screen with a beutiful interface. I was using Collecition View Compositional Layout and Diffable Data Source here. It helped me to implement UICollectionView with two kinds of sections. The firs section responsible for Active chats and the second for Waiting chats. 
 
@@ -16,4 +16,4 @@ Then I started implementation of User Profile screen. If you send to somone a me
 
 Next was screen where user can accept or decline new chat request. This screen is almost the same as User Profile screen. There are couple differences - there is a text field with send button instead of accept and decline buttons. If user press "Accept" button both of you will find new chat in "Active chats" section, otherwise waiting chat will just dissapear for user.
 
-I'm using Firebase(Cloud Firestoe, Authentification and Cloud Storage) as a backend service in this project. It was the next stage of developing talk-talk-chat. Firstly I impleented Authentification options such as registration and log in by email, authintification by google. All users data are storing at Firebase. 
+I'm using Firebase(Cloud Firestoe, Authentification and Cloud Storage) as a backend service in this project. It was the next stage of developing talk-talk-chat. Firstly I impleented Authentification options such as registration and log in by email, authintification by google. I created froms validation for email and password. I need to check if the email is filled and correct same as password. And finaly all users are storing at Firebase.
