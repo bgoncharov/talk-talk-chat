@@ -12,7 +12,7 @@ Next step was implementation of "Chats" screen with a beutiful interface. I was 
 
 Then I made "Nearby people" screen also using Collecition View Compositional Layout and Diffable Data Source. I was testing those screnns with fake data I created in json files. There is a search bar and if you start puting first latters of the name users list start updating with animation.
 
-Then I started implementation of User Profile screen. If you send to somone a message using this screen and you don't have an active chat with that user, new "waiting chat" will appear for user. User received your request can whether accept or decline it.
+Then I started implementation of User Profile screen. If you send someone a message using this screen and you don't have an active chat with that user, new "waiting chat" will appear. User received your request can whether accept or decline it.
 
 Next was screen where user can accept or decline new chat request. This screen is almost the same as User Profile screen. There are couple differences - there is a text field with send button instead of accept and decline buttons. If user press "Accept" button both of you will find new chat in "Active chats" section, otherwise waiting chat will just dissapear for user.
 
