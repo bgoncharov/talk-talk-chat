@@ -18,4 +18,4 @@ Next was screen where user can accept or decline new chat request. This screen i
 
 I'm using Firebase(Cloud Firestoe, Authentification and Cloud Storage) as a backend service in this project. It was the next stage of developing talk-talk-chat. Firstly I impleented Authentification options such as registration and log in by email, authintification by google. I created froms validation for email and password. I need to check if the email is filled and correct same as password. And finaly all users are storing at Firebase.
 
-// TODO: - Notifications, dark mode
+// TODO: - Notifications, dark mode, gif's
