@@ -4,7 +4,7 @@ Talk-talk is a simple real-time chat with image/text messages. After autharizati
 
 This project made with MVC design pattern. I use Firebase as a backend service. Design was the first thing I made working on this project. It was made in Sketch.
 
-![Sketch](https://github.com/bgoncharov/Images/blob/master/talk-talk/talk-talks-sketch.jpg)
+![Sketch](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/sketch.png)
 
 Then according to my Sketch file I was implement four screens for Sign in, Registration and Setup profile options. All screens was made using NSLayoutConstraint and I didn't use Storyboard. 
 
@@ -17,5 +17,7 @@ Then I started implementation of User Profile screen. If you send someone a mess
 Next was screen where user can accept or decline new chat request. This screen is almost the same as User Profile screen. There are couple differences - there is a text field with send button instead of accept and decline buttons. If user press "Accept" button both of you will find new chat in "Active chats" section, otherwise waiting chat will just dissapear for user.
 
 I'm using Firebase(Cloud Firestoe, Authentification and Cloud Storage) as a backend service in this project. It was the next stage of developing talk-talk-chat. Firstly I impleented Authentification options such as registration and log in by email, authintification by google. I created froms validation for email and password. I need to check if the email is filled and correct same as password. And finaly all users are storing at Firebase.
+
+Then I started to work on chat system. I was using [Message Kit](https://github.com/MessageKit/MessageKit) because it's a good and well documented libriry to impelement chat that support messaging with text and images.
 
 // TODO: - Notifications, dark mode, gif's
