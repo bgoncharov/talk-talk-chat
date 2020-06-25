@@ -4,7 +4,7 @@ Talk-talk is a simple real-time chat with image/text messages. After autharizati
 
 This project made with MVC design pattern. I use Firebase as a backend service. Design was the first thing I made working on this project. It was made in Sketch.
 
-![Sketch](https://github.com/bgoncharov/Images/blob/master/talk-talk/talk-talks-sketch.jpg)
+![Sketch](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/sketch.png)
 
 Then according to my Sketch file I was implement four screens for Sign in, Registration and Setup profile options. All screens was made using NSLayoutConstraint and I didn't use Storyboard. 
 
