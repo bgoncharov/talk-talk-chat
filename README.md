@@ -12,6 +12,8 @@ cd ~/talk-talk-chat
 open talktalk.xcworkspace
 ```
 
+## About the application
+
 ![Sketch](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/sketch.png)
 
 This project made with MVC design pattern. I use Firebase as a backend service. Design was the first thing I made working on this project. It was made in Sketch.
