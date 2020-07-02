@@ -12,7 +12,7 @@ cd ~/talk-talk-chat
 open talktalk.xcworkspace
 ```
 
-## About the application
+## About
 
 ![Sketch](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/sketch.png)
 
