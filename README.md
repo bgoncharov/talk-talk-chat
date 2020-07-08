@@ -1,11 +1,11 @@
 # talk-talk
 
-![Registration](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/talk1.gif)
-
 * [About](https://github.com/bgoncharov/talk-talk-chat#about) 
 * [Installation](https://github.com/bgoncharov/talk-talk-chat#installation)
 * [Development process](https://github.com/bgoncharov/talk-talk-chat#development-process)
 * [Summary](https://github.com/bgoncharov/talk-talk-chat#summary)
+
+![Registration](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/talk1.gif)
 
 ## About
 
