@@ -2,6 +2,11 @@
 
 ![Registration](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/talk1.gif)
 
+* [About](https://github.com/bgoncharov/talk-talk-chat#about) 
+* [Installation](https://github.com/bgoncharov/talk-talk-chat#installation)
+* [Development process](https://github.com/bgoncharov/talk-talk-chat#development-process)
+* [Summary](https://github.com/bgoncharov/talk-talk-chat#summary)
+
 ## About
 
 Talk-talk is a simple real-time chat with image/text messages. After autharization on the main screen you can find all people registered in the talk-talk chat. If you want to chat with someone just send a request and it will appear on the "waiting chats" area for that person. That person can whether accept or decline your request. If request accepted new chat will appear in "active chats" area for both of you.
@@ -38,4 +43,8 @@ I'm using Firebase(Cloud Firestoe, Authentification and Cloud Storage) as a back
 
 ![Chating](https://github.com/bgoncharov/talk-talk-chat/blob/master/img/talk2.gif)
 
-Then I started to work on chat system. I was using [Message Kit](https://github.com/MessageKit/MessageKit) library because it's a good and well documented libriry to impelement chat that support messaging with text and images.
+Then I started to work on chat system. I was using [Message Kit](https://github.com/MessageKit/MessageKit) framework because it's a good and well documented libriry to impelement chat that support messaging with text and images.
+
+## Summary
+
+I spent about 2 weeks working on this projectc. While working on it, I got acquainted with modeling Collecition View Compositional Layout, Diffable Data Source and Message Kit framework. I have ideas how to improve my application: notifications, dark mode, better chats sorting, voice/gif/vidoe messages, etc.
