@@ -47,4 +47,4 @@ Then I started to work on chat system. I was using [Message Kit](https://github.
 
 ## Summary
 
-I spent about 2 weeks working on this projectc. While working on it, I got acquainted with modeling Collecition View Compositional Layout, Diffable Data Source and Message Kit framework. I have ideas how to improve my application: notifications, dark mode, better chats sorting, voice/gif/vidoe messages, etc.
+I spent about 2 weeks working on this projectc. While working on it, I got acquainted with Collecition View Compositional Layout, Diffable Data Source and Message Kit framework. I have ideas how to improve my application: notifications, dark mode, better chats sorting, voice/gif/vidoe messages, etc.
